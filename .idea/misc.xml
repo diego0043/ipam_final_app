@@ -7,11 +7,12 @@
         <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/drawable/bordes_redondos.xml" value="0.1255" />
         <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/drawable/btn_secondary.xml" value="0.1595" />
         <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/drawable/card.xml" value="0.1255" />
+        <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/drawable/custom_input.xml" value="0.2065" />
         <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1255" />
-        <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/layout/activity_add_student.xml" value="0.22" />
-        <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/layout/activity_add_student.xml" value="0.2" />
+        <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/layout/activity_main.xml" value="0.16417272338606242" />
         <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/layout/activity_test.xml" value="0.2" />
-        <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/layout/recycler_student_list.xml" value="0.25" />
+        <entry key="..\:/Users/Juan Diego Valencia/AndroidStudioProjects/TareaFinal/app/src/main/res/layout/recycler_student_list.xml" value="0.5" />
       </map>
     </option>
   </component>

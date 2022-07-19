@@ -10,61 +10,118 @@
     android:orientation="vertical"
     tools:context=".AddStudent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="AGREGAR USUARIO"
+        android:textColor="#3F52E3"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="380dp"
         android:layout_height="250dp"
         app:srcCompat="@drawable/img_add" />
 
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:autofillHints="Ingresa tu nombre"
-        android:hint="Ingresa tu nombre"
-        android:textColor="#3F52E3"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
-    <EditText
-        android:id="@+id/et_license"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:autofillHints="Ingresa tu carnet"
-        android:hint="Ingresa tu carnet"
-        android:textColor="#3F52E3"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/et_career"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:autofillHints="Ingresa tu carrera"
-        android:hint="Ingresa tu carrera"
-        android:textColor="#3F52E3"
-        tools:ignore="TouchTargetSizeCheck" />
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Ingresa tu nombre"
+            android:textColorHint="#92A0FF"
+            android:paddingStart="10dp"
+            android:background="@drawable/custom_input"
+            android:textColor="#3F52E3"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-    <EditText
-        android:id="@+id/et_year"
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:autofillHints="Ingresa tu año de ingreso"
-        android:hint="Ingresa tu año de ingreso"
-        android:textColor="#3F52E3"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_license"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#92A0FF"
+            android:hint="Ingresa tu carnet"
+            android:paddingStart="10dp"
+            android:background="@drawable/custom_input"
+            android:layout_marginBottom="5dp"
+            android:textColor="#3F52E3"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_career"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColorHint="#92A0FF"
+            android:hint="Ingresa tu carrera actual"
+            android:paddingStart="10dp"
+            android:background="@drawable/custom_input"
+            android:textColor="#3F52E3"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_year"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:hint="Año de ingreso"
+            android:textColorHint="#92A0FF"
+            android:paddingStart="10dp"
+            android:background="@drawable/custom_input"
+            android:layout_marginTop="10dp"
+            android:textColor="#3F52E3"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_save"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/bordes_redondos"
-        android:text="Guardar"
+        android:text="GUARDAR"
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
 
@@ -74,9 +131,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/btn_secondary"
-        android:text="Eliminar"
+        android:text="ELIMINAR"
         android:textAllCaps="false"
-        android:textColor="#3F52E3" />
+        android:textColor="#3F52E3"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </LinearLayout>

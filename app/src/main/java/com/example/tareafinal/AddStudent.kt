@@ -40,7 +40,7 @@ class AddStudent : AppCompatActivity() {
         if (intent != null && intent.getStringExtra("Mode") == "E"){
             //update data
             isEditMode = true
-            btn_save.text = "Actualizar registro"
+            btn_save.text = "GUARDAR"
             btn_del.visibility = View.VISIBLE
             val student : StudentModel = dbHandler!!.getStudent(intent.getIntExtra("Id", 0))
             et_name.setText(student.name)
@@ -50,7 +50,7 @@ class AddStudent : AppCompatActivity() {
         }else{
             //insert data
             isEditMode = false
-            btn_save.text = "Guardar"
+            btn_save.text = "GUARDAR"
             btn_del.visibility = View.GONE
         }
 
@@ -66,22 +66,31 @@ class AddStudent : AppCompatActivity() {
                 student.year = et_year.text.toString()
 
                 success = dbHandler?.updateStudent(student) as Boolean
+
             }else{
                 //insert
-                student.name = et_name.text.toString()
-                student.license = et_license.text.toString()
-                student.career = et_career.text.toString()
-                student.year = et_year.text.toString()
-                success = dbHandler?.addStudent(student) as Boolean
+                if(et_name.toString().isEmpty() || et_license.toString().isEmpty() || et_career.toString().isEmpty() || et_year.toString().isEmpty()){
+                    Toast.makeText(applicationContext, "Debes llenar todos los campos", Toast.LENGTH_SHORT).show()
+                }else{
+
+                    student.name = et_name.text.toString()
+                    student.license = et_license.text.toString()
+                    student.career = et_career.text.toString()
+                    student.year = et_year.text.toString()
+                    success = dbHandler?.addStudent(student) as Boolean
+
+                    if (success){
+                        val i = Intent(applicationContext, MainActivity::class.java)
+                        startActivity(i)
+                        finish()
+                    }else{
+                        Toast.makeText(applicationContext, "Algo salio mal!!", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
             }
 
-            if (success){
-                val i = Intent(applicationContext, MainActivity::class.java)
-                startActivity(i)
-                finish()
-            }else{
-                Toast.makeText(applicationContext, "Algo salio mal!!", Toast.LENGTH_SHORT).show()
-            }
+
         }
 
         btn_del.setOnClickListener {

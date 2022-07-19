@@ -22,8 +22,8 @@
 
     <Button
         android:id="@+id/btn_add_student"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
+        android:layout_width="190dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/bordes_redondos"
         android:text="NUEVO REGISTRO"
@@ -67,13 +67,13 @@
         android:id="@+id/imageView"
         android:layout_width="48dp"
         android:layout_height="36dp"
+        android:elevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/rv_list"
         app:layout_constraintEnd_toEndOf="parent"
-        android:elevation="4dp"
-        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144"
+        app:layout_constraintVertical_bias="0.316"
         app:srcCompat="@drawable/user" />A
 
 </androidx.constraintlayout.widget.ConstraintLayout>

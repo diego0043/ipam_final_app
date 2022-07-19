@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AlertDialogLayout
 import com.example.tareafinal.database.DatabaseHelper
 import com.example.tareafinal.model.StudentModel
 
@@ -69,7 +70,7 @@ class AddStudent : AppCompatActivity() {
 
             }else{
                 //insert
-                if(et_name.toString().isEmpty() || et_license.toString().isEmpty() || et_career.toString().isEmpty() || et_year.toString().isEmpty()){
+                if(et_name.text.toString().isEmpty() || et_license.text.toString().isEmpty() || et_career.text.toString().isEmpty() || et_year.text.toString().isEmpty()){
                     Toast.makeText(applicationContext, "Debes llenar todos los campos", Toast.LENGTH_SHORT).show()
                 }else{
 
@@ -95,7 +96,7 @@ class AddStudent : AppCompatActivity() {
 
         btn_del.setOnClickListener {
             val dialog = AlertDialog.Builder(this).setTitle("Info").setMessage("¿Esta seguro que desea eliminar el registo?")
-                .setPositiveButton("Si", {dialog, i ->
+                .setPositiveButton("Si",  {dialog, i ->
                     val success = dbHandler?.deleteStudent(intent.getIntExtra("Id", 0)) as Boolean
                     if (success)
                         finish()
